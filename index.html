@@ -78,9 +78,9 @@ h2{font-size:clamp(26px,3vw,34px);letter-spacing:-0.025em;line-height:1.15;font-
 .textlink{color:var(--accent);text-decoration:none;font-weight:500}
 .textlink:hover{text-decoration:underline}
 
-.others{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:1px solid var(--line)}
-.other{padding:24px 24px 24px 0;border-bottom:1px solid var(--line)}
-.other + .other{padding-left:24px;border-left:1px solid var(--line)}
+.others{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:44px;border-top:1px solid var(--line)}
+.other{padding:28px 28px 28px 0;border-bottom:1px solid var(--line)}
+.other:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
 .other .big{font-size:30px;font-weight:600;letter-spacing:-0.03em}
 .other h3{font-size:17px;font-weight:600;margin-top:10px}
 .other p{color:var(--muted);font-size:15.5px;margin-top:4px}
@@ -104,7 +104,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
   .hero{padding:56px 0 48px}
   .why{grid-template-columns:1fr;gap:28px}
   .others{grid-template-columns:1fr}
-  .other,.other + .other{padding:22px 0;border-left:0}
+  .other,.other:nth-child(even){padding:22px 0;border-left:0}
   .timeline li{grid-template-columns:1fr;gap:4px}
   nav{gap:16px}
   nav .hide-sm{display:none}
@@ -191,7 +191,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
           <span>Next.js App Router</span><span>Vercel</span><span>Supabase</span><span>Stripe</span><span>Claude API</span><span>Resend</span><span>Cloudinary</span>
         </div>
         <p class="lesson">A lesson I'd share with any founder: I first capped usage by counting AI generations, then realized customers think in published posts. Pricing on what the customer values, with a separate quiet limit to protect AI costs, is the cleaner design, and it's what I'm moving to.</p>
-        <p style="margin-top:18px"><a class="textlink" href="https://orvinn.app">Visit orvinn.app</a></p>
+        <p style="margin-top:18px;display:flex;gap:22px;flex-wrap:wrap"><a class="textlink" href="https://github.com/fgarzon78/orvinn-case-study">Read the full case study</a><a class="textlink" href="https://orvinn.app">Visit orvinn.app</a></p>
       </div>
     </div>
 
@@ -209,6 +209,12 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
         <a class="textlink" href="https://www.instagram.com/ricambioem/">View on Instagram</a>
       </div>
       <div class="other">
+        <div class="big">AI agent</div>
+        <h3>Lucas</h3>
+        <p>An experimental AI agent that finds, bids on, and completes research tasks on AI agent marketplaces. Runs on its own Vercel project and database, with guardrails I can tighten or loosen at any time.</p>
+        <a class="textlink" href="https://toku.agency/agents/lucas">View Lucas's profile</a>
+      </div>
+      <div class="other">
         <div class="big">Live app</div>
         <h3>Route Helper</h3>
         <p>A small operations app for coordinating delivery times and calculating driver payouts.</p>
@@ -221,7 +227,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
     <h2>Experience</h2>
     <ol class="timeline">
       <li><span class="yr">2025 – now</span><div><b>Founder and product builder, Orvinn (Garzon Labs)</b><p>Building and running an AI marketing platform on Vercel.</p></div></li>
-      <li><span class="yr"><span class="fill">2021</span> – now</span><div><b>Licensed Florida realtor and founder, GarzonRE</b><p>Miami and Brickell, brokered by Fortune Christie's International Real Estate. $4.7M+ in documented sales.</p></div></li>
+      <li><span class="yr">Current</span><div><b>Licensed Florida realtor and founder, GarzonRE</b><p>Miami and Brickell, brokered by Fortune Christie's International Real Estate. $4.7M+ in documented sales.</p></div></li>
       <li><span class="yr">2020 – 2024</span><div><b>Social media and design production manager, Ricambi OEM</b><p>Owned the Instagram sales channel and product catalog.</p></div></li>
       <li><span class="yr">2017 – 2018</span><div><b>Marketing coordinator, Riva Motorsports</b><p>Campaigns, email, web, and monthly events of about 120 attendees.</p></div></li>
       <li><span class="yr">2013 – 2017</span><div><b>Web production specialist, MEDNAX Medical Group</b><p>Maintained 12 medical-practice websites and turned technical healthcare information into clear communication.</p></div></li>
