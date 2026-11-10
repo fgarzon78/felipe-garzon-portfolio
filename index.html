@@ -1,256 +1,742 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Felipe Garzon — Founder who ships on Vercel</title>
-<meta name="description" content="Felipe Garzon built and runs Orvinn, an AI marketing platform on Next.js and Vercel. Founder, licensed realtor, and revenue owner.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Garzon — WordPress Websites, Automation & AI Agents</title>
+<meta name="description" content="Felipe Garzon builds WordPress and Shopify websites, Make.com automations and AI tools with Claude and ChatGPT. Miami-based, available for remote work.">
+<meta property="og:title" content="Felipe Garzon — WordPress Websites, Automation & AI">
+<meta property="og:description" content="WordPress and Shopify websites, automation and AI. Miami-based, available for remote work.">
+<script>
+  (function(){
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="alternate" type="text/markdown" href="llms.txt" title="Felipe Garzon for AI agents">
+<link rel="alternate" type="text/html" href="agents.html" title="Agent-readable profile">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Felipe Garzon","jobTitle":"WordPress & Web Builder, Automation and AI Agents","email":"mailto:felogarzon@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"},"knowsLanguage":["English","Spanish"],"alumniOf":{"@type":"CollegeOrUniversity","name":"The Art Institute of Fort Lauderdale"},"knowsAbout":["WordPress","Kadence","Shopify","HTML","CSS","JavaScript","Node.js","Next.js","Make.com","Zapier","Claude","ChatGPT","AI agents","Marketing automation"],"sameAs":["https://github.com/fgarzon78","https://orvinn.app/","https://lucasnode.app/","https://garzonre.com/"],"seeks":{"@type":"Demand","name":"Remote WordPress site builder role, website projects, automation and AI agent projects"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#ffffff; --ink:#000000; --muted:#666666; --line:#e5e5e5; --soft:#f5f5f5;
-  --accent:#0b5fff; --ready:#1a7f37; --fill:#ffe14d;
-  --sans:"Geist",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#000000;--ink:#ededed;--muted:#a1a1a1;--line:#262626;--soft:#0f0f0f;--accent:#4d8dff;--ready:#3fb950}
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-img{max-width:100%;display:block}
+  :root{
+    --bg:#FFFFFF; --fg:#0A0A0A; --muted:#5E5E5E; --soft:#8E8E8E; --line:#E6E6E6; --panel:#F3F3F3;
+    --glass:rgba(255,255,255,.86); --head:rgba(255,255,255,.94);
+    --px1:#0A0A0A; --px2:#6B6B6B; --px3:#CFCFCF;
+    --max:1240px;
+  }
+  [data-theme="dark"]{
+    --bg:#0A0A0A; --fg:#F5F5F5; --muted:#A6A6A6; --soft:#7A7A7A; --line:#262626; --panel:#161616;
+    --glass:rgba(10,10,10,.82); --head:rgba(10,10,10,.9);
+    --px1:#F5F5F5; --px2:#9A9A9A; --px3:#3A3A3A;
+  }
+  /* inverted sections: black in light mode, white in dark mode */
+  .inv{--bg:#0A0A0A; --fg:#F5F5F5; --muted:#A6A6A6; --soft:#7A7A7A; --line:#2A2A2A; --panel:#161616; background:var(--bg); color:var(--fg)}
+  [data-theme="dark"] .inv{--bg:#FFFFFF; --fg:#0A0A0A; --muted:#5E5E5E; --soft:#8E8E8E; --line:#E6E6E6; --panel:#F3F3F3}
+  body,header,.hero-card,.menu,section,footer,.lg,.ig-tile,.stack span{transition:background-color .35s,color .35s,border-color .35s}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--bg);color:var(--fg);font-family:Inter,"Helvetica Neue",Arial,sans-serif;font-size:15.5px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 36px}
+  .light{font-family:Jost,Inter,sans-serif;font-weight:300;letter-spacing:-.01em;line-height:1.12}
+  .label{font-family:Jost,sans-serif;font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--soft)}
+  section{padding:130px 0}
+  h2.light{font-size:clamp(34px,4.4vw,56px)}
+  .ul{border-bottom:1px solid currentColor;padding-bottom:1px;transition:opacity .2s}
+  .ul:hover{opacity:.6}
 
-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.name{font-weight:600;text-decoration:none;letter-spacing:-0.01em}
-nav{display:flex;gap:22px;font-size:15px}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:12px;padding:15px 28px;font-family:Jost,sans-serif;font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--fg);transition:background .25s,color .25s}
+  .btn-dark{background:var(--fg);color:var(--bg)}
+  .btn-dark:hover{background:transparent;color:var(--fg)}
+  .btn-line:hover{background:var(--fg);color:var(--bg)}
+  .btn svg{width:15px;height:15px}
 
-.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;padding:88px 0 72px;align-items:start}
-h1{font-size:clamp(36px,5vw,58px);line-height:1.04;letter-spacing:-0.035em;font-weight:600}
-.lede{margin-top:22px;font-size:19px;color:var(--muted);max-width:34em}
-.cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:11px 18px;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;border:1px solid var(--line)}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn:hover{border-color:var(--ink)}
+  /* header */
+  header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s,box-shadow .35s}
+  header.solid{background:var(--head);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:86px}
+  .mark{display:inline-flex;flex-direction:column;align-items:flex-start;font-family:Jost,sans-serif;font-weight:300;text-transform:uppercase;line-height:1}
+  .mark .name{font-size:22px;letter-spacing:.3em;margin-right:-.3em}
+  .mark small{display:inline-block;white-space:nowrap;font-size:9.5px;letter-spacing:.3em;margin-top:7px;color:var(--muted)}
+  .menu{display:flex;gap:38px;align-items:center;font-size:14px}
+  .nav-right{display:flex;align-items:center;gap:30px}
+  .theme{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,transform .3s}
+  .theme:hover{border-color:var(--fg);transform:rotate(-15deg)}
+  .theme svg{width:18px;height:18px}
+  .theme .moon{display:none}
+  [data-theme="dark"] .theme .sun{display:none}
+  [data-theme="dark"] .theme .moon{display:block}
+  .menu a{transition:opacity .2s}
+  .menu a:hover{opacity:.55}
+  .menu .cta{border:1px solid var(--fg);padding:9px 18px;font-family:Jost,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  .menu .cta:hover{background:var(--fg);color:var(--bg);opacity:1}
+  .burger{display:none;background:none;border:0;cursor:pointer;color:var(--fg);font-family:Jost,sans-serif;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
 
-/* the one bold element: a real shipping log */
-.log{border:1px solid var(--line);border-radius:10px;font-family:var(--mono);font-size:13.5px;overflow:hidden}
-.log-top{display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--soft);color:var(--muted)}
-.log ol{list-style:none}
-.log li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
-.log li:last-child{border-bottom:0}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--ready)}
-.state{color:var(--muted)}
-@media (prefers-reduced-motion:no-preference){
-  .log li{opacity:0;animation:in .35s ease forwards}
-  .log li:nth-child(1){animation-delay:.1s}.log li:nth-child(2){animation-delay:.22s}
-  .log li:nth-child(3){animation-delay:.34s}.log li:nth-child(4){animation-delay:.46s}
-  .log li:nth-child(5){animation-delay:.58s}.log li:nth-child(6){animation-delay:.7s}
-  .log li:nth-child(7){animation-delay:.82s}
-  @keyframes in{to{opacity:1}}
-}
+  /* hero */
+  .hero{position:relative;height:100vh;min-height:660px;background:var(--bg);overflow:hidden;padding:0}
+  #pixels{position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:pixelated}
+  .hero-card{position:absolute;z-index:3;left:36px;bottom:72px;max-width:560px;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:42px 44px}
+  .hero-card h1{font-size:clamp(32px,3.8vw,50px);margin:14px 0 18px}
+  .hero-card p{color:var(--muted);margin-bottom:28px}
+  .hero-card .row{display:flex;gap:12px;flex-wrap:wrap}
+  .resume-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:14px;border-bottom:1px solid var(--fg);padding-bottom:2px;transition:opacity .2s}
+  .resume-link:hover{opacity:.6}
+  .resume-link svg{width:16px;height:16px}
+  .scroll{position:absolute;z-index:3;right:36px;bottom:80px;font-family:Jost,sans-serif;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;display:flex;align-items:center;gap:14px}
+  .scroll::after{content:"";width:1px;height:60px;background:linear-gradient(var(--muted),transparent)}
 
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,3vw,34px);letter-spacing:-0.025em;line-height:1.15;font-weight:600;max-width:22em}
-.sub{color:var(--muted);margin-top:10px;max-width:38em}
+  /* intro 3-col */
+  .intro{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:60px;padding:90px 0;border-bottom:1px solid var(--line)}
+  .intro p.big{font-size:19px;line-height:1.65}
+  .intro p.big .m{color:var(--muted)}
+  .intro .col{font-size:14.5px;line-height:1.9}
+  .intro .col .label{display:block;margin-bottom:10px}
 
-.why{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px}
-.why h3{font-size:17px;font-weight:600;margin-bottom:8px}
-.why p{color:var(--muted);font-size:16px}
+  /* logos */
+  .logos{padding:70px 0 80px;border-bottom:1px solid var(--line)}
+  .logos .top{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:40px;flex-wrap:wrap}
+  .logos .top p{color:var(--muted);font-size:14.5px}
+  .logo-grid{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .lg{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px 10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .lg svg{width:34px;height:34px;fill:var(--fg)}
+  .lg span{font-size:12.5px;color:var(--fg);letter-spacing:.02em}
 
-.feature{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;margin-top:44px;align-items:start}
-.shot{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--soft)}
-.feature h3{font-size:24px;letter-spacing:-0.02em;font-weight:600}
-.feature .meta{color:var(--muted);font-size:15px;margin-top:4px}
-.feature ul{margin-top:18px;padding-left:18px}
-.feature li{margin-bottom:8px}
-.stack{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-.stack span{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line);border-radius:4px;padding:3px 8px;color:var(--muted)}
-.lesson{margin-top:22px;padding-left:16px;border-left:2px solid var(--accent);color:var(--muted);font-size:16px}
-.textlink{color:var(--accent);text-decoration:none;font-weight:500}
-.textlink:hover{text-decoration:underline}
+  /* black and white sections, separated by thin lines */
+  main > section:not(.hero):not(.inv){border-top:1px solid var(--line)}
 
-.others{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:44px;border-top:1px solid var(--line)}
-.other{padding:28px 28px 28px 0;border-bottom:1px solid var(--line)}
-.other:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
-.other .big{font-size:30px;font-weight:600;letter-spacing:-0.03em}
-.other h3{font-size:17px;font-weight:600;margin-top:10px}
-.other p{color:var(--muted);font-size:15.5px;margin-top:4px}
-.other a{display:inline-block;margin-top:10px;font-size:15px}
+  /* services */
+  .services-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:70px;align-items:end}
+  .services-head p{color:var(--muted);font-size:16.5px;max-width:480px}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--fg)}
+  .svc{padding:40px 36px 44px 0;display:flex;flex-direction:column}
+  .svc + .svc{padding-left:36px;border-left:1px solid var(--line)}
+  .svc .no{font-family:Jost,sans-serif;font-size:13px;letter-spacing:.2em;color:var(--soft)}
+  .svc h3{font-family:Jost,sans-serif;font-weight:400;font-size:28px;margin:16px 0 12px;letter-spacing:-.005em}
+  .svc > p{color:var(--muted);margin-bottom:22px}
+  .svc ul{list-style:none;margin-bottom:28px;font-size:14.5px}
+  .svc li{padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+  .svc li::before{content:"—";color:var(--soft)}
+  .svc .uses{display:flex;gap:10px;margin-bottom:28px}
+  .svc .uses svg{width:22px;height:22px}
+  .svc .go{margin-top:auto;font-family:Jost,sans-serif;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;display:inline-flex;gap:10px;align-items:center}
+  .svc .go svg{width:14px;height:14px;transition:transform .2s}
+  .svc .go:hover svg{transform:translateX(4px)}
 
-.timeline{margin-top:36px;list-style:none}
-.timeline li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}
-.timeline .yr{font-family:var(--mono);font-size:14px;color:var(--muted);padding-top:2px}
-.timeline b{font-weight:600}
-.timeline p{color:var(--muted);font-size:16px;margin-top:2px}
-.fill{background:var(--fill);color:#000;padding:0 3px;font-weight:600}
+  /* instagram-style project grid */
+  .ig-profile{max-width:860px;margin:0 auto 46px;text-align:center}
+  .ig-name{justify-content:center}
+  .ig-stats{justify-content:center}
+  .ig-bio{margin:0 auto}
+  .ig-name{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .ig-name h2{font-family:Jost,sans-serif;font-weight:400;font-size:26px;letter-spacing:.02em}
+  .ig-name a{font-family:Jost,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;background:var(--fg);color:var(--bg);padding:8px 16px}
+  .ig-stats{display:flex;gap:36px;margin:16px 0 14px;font-size:15px}
+  .ig-stats b{font-weight:600}
+  .ig-bio{font-size:14.5px;color:var(--muted);max-width:520px}
+  .ig-bio strong{color:var(--fg);font-weight:500}
+  .ig-tabs{display:flex;justify-content:center;border-top:1px solid var(--line);margin-bottom:4px}
+  .ig-tabs span{display:inline-flex;align-items:center;gap:8px;padding:16px 0;border-top:1.5px solid var(--fg);margin-top:-1px;font-family:Jost,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+  .ig-tabs svg{width:13px;height:13px}
+  .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .ig-tile{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--panel);display:block}
+  .ig-tile .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:Jost,sans-serif;font-weight:300;letter-spacing:.2em;text-transform:uppercase;font-size:20px;color:var(--soft)}
+  .ig-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
+  .ig-tile .type{position:absolute;top:12px;right:12px;z-index:2;width:22px;height:22px;color:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45))}
+  .ig-tile .over{position:absolute;inset:0;z-index:3;background:rgba(20,20,20,.84);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;opacity:0;transition:opacity .3s}
+  .ig-tile:hover .over,.ig-tile:focus .over{opacity:1}
+  .ig-tile .over b{font-family:Jost,sans-serif;font-weight:400;font-size:24px;letter-spacing:.02em}
+  .ig-tile .over span{font-size:13px;opacity:.85;margin-top:4px}
+  .ig-tile .over p{font-size:13.5px;opacity:.9;margin-top:12px;max-width:280px;line-height:1.55}
+  .ig-tile .over i{font-style:normal;font-family:Jost,sans-serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;margin-top:16px;border-bottom:1px solid rgba(255,255,255,.6);padding-bottom:2px}
+  .post{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:30px}
+  .post small{font-family:Jost,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+  .post .big{font-family:Jost,sans-serif;font-weight:300;font-size:clamp(26px,3vw,40px);line-height:1.08}
+  .post .logos-row{display:flex;gap:12px}
+  .post .logos-row svg{width:22px;height:22px}
+  .post.mono{background:var(--panel);color:var(--fg)}
+  .post.mono .logos-row svg{fill:var(--fg)}
+  .post.dark{background:var(--fg);color:var(--bg)}
+  .post.dark .big{font-size:clamp(44px,5.4vw,76px)}
 
-.contact{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
-.contact .links{font-size:18px;line-height:1.9}
-.contact .links a{text-decoration:none;border-bottom:1px solid var(--line)}
-.contact .links a:hover{border-color:var(--ink)}
-footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  /* AI generative video */
+  .gen{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}
+  .phone{position:relative;width:min(340px,100%);aspect-ratio:9/16;margin:0 auto;border-radius:34px;padding:10px;background:#0A0A0A;border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(0,0,0,.55)}
+  .phone video{width:100%;height:100%;object-fit:cover;border-radius:26px;display:block;background:#2a2926}
+  .phone .sound{position:absolute;right:22px;bottom:22px;z-index:2;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.88);display:grid;place-items:center;cursor:pointer;transition:transform .2s}
+  .phone .sound:hover{transform:scale(1.08)}
+  .phone .sound svg{width:18px;height:18px}
+  .phone .tag{position:absolute;left:22px;top:22px;z-index:2;font-family:Jost,sans-serif;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;background:rgba(255,255,255,.88);padding:6px 10px}
+  .gen h2{margin:18px 0 18px}
+  .gen > div > p{color:var(--muted);font-size:16.5px;margin-bottom:16px;max-width:560px}
+  .steps{list-style:none;counter-reset:st;margin:34px 0 30px;border-top:1px solid var(--line)}
+  .steps li{counter-increment:st;display:grid;grid-template-columns:48px 1fr;column-gap:0;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .steps li::before{content:counter(st,decimal-leading-zero);font-family:Jost,sans-serif;font-size:13px;letter-spacing:.14em;color:var(--soft);padding-top:2px}
+  .steps b{font-weight:500;grid-column:2}
+  .steps span{color:var(--muted)}
 
-@media (max-width:860px){
-  .hero,.feature{grid-template-columns:1fr;gap:36px}
-  .hero{padding:56px 0 48px}
-  .why{grid-template-columns:1fr;gap:28px}
-  .others{grid-template-columns:1fr}
-  .other,.other:nth-child(even){padding:22px 0;border-left:0}
-  .timeline li{grid-template-columns:1fr;gap:4px}
-  nav{gap:16px}
-  nav .hide-sm{display:none}
-}
+
+
+  /* products */
+  .prod{display:grid;grid-template-columns:90px 1.1fr 1fr;gap:40px;padding:50px 0;border-top:1px solid var(--line)}
+  .prod:last-child{border-bottom:1px solid var(--line)}
+  .prod .no{font-family:Jost,sans-serif;font-weight:300;font-size:40px;color:var(--soft);line-height:1}
+  .prod h3{font-family:Jost,sans-serif;font-weight:400;font-size:34px;line-height:1.1;margin:10px 0 14px}
+  .prod p{color:var(--muted)}
+  .prod ul{list-style:none;font-size:14.5px}
+  .prod li{padding:10px 0;border-bottom:1px solid var(--line)}
+  .prod li:first-child{padding-top:0}
+  .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .stack span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;border:1px solid var(--line);padding:6px 11px;color:var(--muted)}
+  .stack svg{width:14px;height:14px}
+  .prod .links{display:flex;gap:22px;margin-top:22px;font-size:14px}
+
+  /* numbers */
+  .numbers{padding:80px 0}
+  .numbers .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+  .numbers b{display:block;font-family:Jost,sans-serif;font-weight:300;font-size:clamp(42px,4.6vw,62px);line-height:1;margin-bottom:10px}
+  .numbers span{font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+
+  /* about / experience */
+  .about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:90px}
+  .about-grid .lead{font-family:Jost,sans-serif;font-weight:300;font-size:clamp(24px,2.4vw,31px);line-height:1.4;margin:18px 0 28px}
+  .about-grid .txt p{color:var(--muted);margin-bottom:16px}
+  .edu{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);display:grid;gap:18px}
+  .edu div{font-size:14.5px}
+  .edu b{display:block;font-weight:500}
+  .edu span{color:var(--muted)}
+  .xp{list-style:none;border-top:1px solid var(--fg)}
+  .xp li{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .xp .yr{font-size:13px;color:var(--soft);padding-top:4px}
+  .xp h4{font-family:Jost,sans-serif;font-weight:400;font-size:19px;line-height:1.3}
+  .xp .org{font-size:13.5px;color:var(--muted);margin:2px 0 6px}
+  .xp p{font-size:14.5px;color:var(--muted)}
+
+  /* cta */
+  .cta{text-align:center;padding:140px 0}
+  .cta h2{font-size:clamp(40px,6vw,82px);margin:20px 0 26px}
+  .cta p{color:var(--muted);max-width:520px;margin:0 auto 40px;font-size:16.5px}
+  .cta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta button.btn{background:transparent;cursor:pointer;color:var(--fg)}
+  .cta button.btn:hover{background:var(--fg);color:var(--bg)}
+  .cta .addr{margin:28px auto 0;font-family:Jost,sans-serif;font-size:15px;letter-spacing:.08em;color:var(--muted)}
+
+  /* footer in the style of Monid */
+  .ft{background:#1E1E1E;color:#EDEDED;overflow:hidden;padding:86px 0 0}
+  [data-theme="dark"] .ft{background:#FFFFFF;color:#0A0A0A}
+  [data-theme="dark"] .ft-about p{color:#4A4A4A}
+  [data-theme="dark"] .ft-about .ft-legal{color:#8A8A8A}
+  [data-theme="dark"] .ft-about .ft-legal a,[data-theme="dark"] .ft-cols a{color:#0A0A0A}
+  [data-theme="dark"] .ft-about .ft-legal a:hover,[data-theme="dark"] .ft-cols a:hover{color:#8A8A8A}
+  [data-theme="dark"] .ft-big{color:#0A0A0A}
+  .ft-top{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:start}
+  .ft-about p{font-size:16px;line-height:1.75;color:#BDBDBD;max-width:470px}
+  .ft-about .ft-legal{margin-top:46px;font-size:14px;color:#8A8A8A}
+  .ft-about .ft-legal a{color:#BDBDBD}
+  .ft-about .ft-legal a:hover{color:#fff}
+  .ft-cols{display:flex;gap:80px}
+  .ft-cols div{display:flex;flex-direction:column;gap:16px;font-size:16px}
+  .ft-cols a{color:#EDEDED;transition:color .2s}
+  .ft-cols a:hover{color:#8A8A8A}
+  .ft-label{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#8A8A8A;margin-bottom:8px}
+  .ft-big{font-family:Inter,"Helvetica Neue",Arial,sans-serif;font-weight:600;font-size:min(21vw,292px);line-height:.8;letter-spacing:-.045em;color:#fff;white-space:nowrap;margin:110px 0 -.13em -.05em;display:flex;justify-content:space-between;align-items:flex-start}
+  .ft-star{font-size:1.15em;line-height:.62;margin-right:-.04em}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  @media (max-width:1000px){
+    .intro{grid-template-columns:1fr 1fr}
+    .intro > :first-child{grid-column:1 / -1}
+    .logo-grid{grid-template-columns:repeat(4,1fr)}
+    .services-head,.about-grid{grid-template-columns:1fr;gap:30px}
+    .svc-grid{grid-template-columns:1fr}
+    .svc,.svc + .svc{padding:36px 0;border-left:0;border-bottom:1px solid var(--line)}
+    .prod{grid-template-columns:60px 1fr;gap:20px 30px}
+    .prod > ul{grid-column:2}
+    .numbers .wrap{grid-template-columns:1fr 1fr;row-gap:44px}
+    .about-grid{gap:60px}
+    .gen{grid-template-columns:1fr;gap:56px}
+    .ft-top{grid-template-columns:1fr}
+    .ft-cols{gap:50px}
+  }
+  @media (max-width:720px){
+    .nav-right{gap:14px}
+    .wrap{padding:0 22px}
+    section{padding:90px 0}
+    .nav{height:72px}
+    .mark .name{font-size:17px}
+    .mark small{font-size:8px}
+    .burger{display:block}
+    .menu{position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);padding:12px 22px 26px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .35s}
+    .menu.open{transform:none}
+    .menu a{padding:12px 0;font-size:16px}
+    .menu .cta{margin-top:10px}
+    .hero{height:auto;min-height:0;padding-top:72px}
+    #pixels{position:relative;height:52vh}
+    .hero-card{position:relative;left:auto;bottom:auto;max-width:none;padding:34px 22px 40px;background:var(--bg)}
+    .scroll{display:none}
+    .intro{grid-template-columns:1fr;gap:34px;padding:64px 0}
+    .logo-grid{grid-template-columns:repeat(3,1fr)}
+    .ig-grid{gap:3px}
+    .ig-stats{gap:22px}
+    .ig-tile .over{opacity:0}
+    .post{padding:12px}
+    .post small,.post .logos-row{display:none}
+    .post .big{font-size:15px}
+    .ig-tile .type{display:none}
+    .ig-tile .ph{font-size:11px;letter-spacing:.12em;padding:6px;text-align:center}
+    .post.dark .big{font-size:24px}
+    .prod{grid-template-columns:1fr}
+    .ft-cols{gap:28px;flex-wrap:wrap}
+    .ft-cols div{font-size:15px}
+    .ft-big{margin-top:70px}
+    .prod > ul{grid-column:auto}
+    .xp li{grid-template-columns:1fr;gap:4px}
+  }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wordpress" viewBox="0 0 24 24"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></symbol><symbol id="i-shopify" viewBox="0 0 24 24"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></symbol><symbol id="i-claude" viewBox="0 0 24 24"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol><symbol id="i-openai" viewBox="0 0 24 24"><path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.797.797 0 00-.856 0l-5.97 3.473zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.433.433 0 01.476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142c-.167-.095-.239-.238-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737v6.898zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33L12 15.128zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303l-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.482 4.482 0 014.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.432.432 0 01-.476 0zm-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71c.286.167.571.167.856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523zm5.899 2.83a5.947 5.947 0 005.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.947-.642 0-1.26.095-1.88.31A5.962 5.962 0 0010.205 0a5.947 5.947 0 00-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 004.162 1.713z"/></symbol><symbol id="i-make" viewBox="0 0 24 24"><path d="M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z"/></symbol><symbol id="i-nodedotjs" viewBox="0 0 24 24"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></symbol><symbol id="i-html5" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></symbol><symbol id="i-css" viewBox="0 0 24 24"><path d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/></symbol><symbol id="i-javascript" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></symbol><symbol id="i-nextdotjs" viewBox="0 0 24 24"><path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></symbol><symbol id="i-vercel" viewBox="0 0 24 24"><path d="m12 1.608 12 20.784H0Z"/></symbol><symbol id="i-supabase" viewBox="0 0 24 24"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></symbol><symbol id="i-stripe" viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></symbol><symbol id="i-mailchimp" viewBox="0 0 24 24"><path d="M11.267 0C6.791-.015-1.82 10.246 1.397 12.964l.79.669a3.88 3.88 0 0 0-.22 1.792c.084.84.518 1.644 1.22 2.266.666.59 1.542.964 2.392.964 1.406 3.24 4.62 5.228 8.386 5.34 4.04.12 7.433-1.776 8.854-5.182.093-.24.488-1.316.488-2.267 0-.956-.54-1.352-.885-1.352-.01-.037-.078-.286-.172-.586-.093-.3-.19-.51-.19-.51.375-.563.382-1.065.332-1.35-.053-.353-.2-.653-.496-.964-.296-.311-.902-.63-1.753-.868l-.446-.124c-.002-.019-.024-1.053-.043-1.497-.014-.32-.042-.822-.197-1.315-.186-.668-.508-1.253-.911-1.627 1.112-1.152 1.806-2.422 1.804-3.511-.003-2.095-2.576-2.729-5.746-1.416l-.672.285A678.22 678.22 0 0 0 12.7.504C12.304.159 11.817.002 11.267 0zm.073.873c.166 0 .322.019.465.058.297.084 1.28 1.224 1.28 1.224s-1.826 1.013-3.52 2.426c-2.28 1.757-4.005 4.311-5.037 7.082-.811.158-1.526.618-1.963 1.253-.261-.218-.748-.64-.834-.804-.698-1.326.761-3.902 1.781-5.357C5.834 3.44 9.37.867 11.34.873zm3.286 3.273c.04-.002.06.05.028.074-.143.11-.299.26-.413.414a.04.04 0 0 0 .031.064c.659.004 1.587.235 2.192.574.041.023.012.103-.034.092-.915-.21-2.414-.369-3.97.01-1.39.34-2.45.863-3.224 1.426-.04.028-.086-.023-.055-.06.896-1.035 1.999-1.935 2.987-2.44.034-.018.07.019.052.052-.079.143-.23.447-.278.678-.007.035.032.063.062.042.615-.42 1.684-.868 2.622-.926zm3.023 3.205l.056.001a.896.896 0 0 1 .456.146c.534.355.61 1.216.638 1.845.015.36.059 1.229.074 1.478.034.571.184.651.487.751.17.057.33.098.563.164.706.198 1.125.4 1.39.658.157.162.23.333.253.497.083.608-.472 1.36-1.942 2.041-1.607.746-3.557.935-4.904.785l-.471-.053c-1.078-.145-1.693 1.247-1.046 2.201.417.615 1.552 1.015 2.688 1.015 2.604 0 4.605-1.111 5.35-2.072a.987.987 0 0 0 .06-.085c.036-.055.006-.085-.04-.054-.608.416-3.31 2.069-6.2 1.571 0 0-.351-.057-.672-.182-.255-.1-.788-.344-.853-.891 2.333.72 3.801.039 3.801.039a.072.072 0 0 0 .042-.072.067.067 0 0 0-.074-.06s-1.911.283-3.718-.378c.197-.64.72-.408 1.51-.345a11.045 11.045 0 0 0 3.647-.394c.818-.234 1.892-.697 2.727-1.356.281.618.38 1.299.38 1.299s.219-.04.4.073c.173.106.299.326.213.895-.176 1.063-.628 1.926-1.387 2.72a5.714 5.714 0 0 1-1.666 1.244c-.34.18-.704.334-1.087.46-2.863.935-5.794-.093-6.739-2.3a3.545 3.545 0 0 1-.189-.522c-.403-1.455-.06-3.2 1.008-4.299.065-.07.132-.153.132-.256 0-.087-.055-.179-.102-.243-.374-.543-1.669-1.466-1.409-3.254.187-1.284 1.31-2.189 2.357-2.135.089.004.177.01.266.015.453.027.85.085 1.223.1.625.028 1.187-.063 1.853-.618.225-.187.405-.35.71-.401.028-.005.092-.028.215-.028zm.022 2.18a.42.42 0 0 0-.06.005c-.335.054-.347.468-.228 1.04.068.32.187.595.32.765.175-.02.343-.022.498 0 .089-.205.104-.557.024-.942-.112-.535-.261-.872-.554-.868zm-3.66 1.546a1.724 1.724 0 0 0-1.016.326c-.16.117-.311.28-.29.378.008.032.031.056.088.063.131.015.592-.217 1.122-.25.374-.023.684.094.923.2.239.104.386.173.443.113.037-.038.026-.11-.031-.204-.118-.192-.36-.387-.618-.497a1.601 1.601 0 0 0-.621-.129zm4.082.81c-.171-.003-.313.186-.317.42-.004.236.131.43.303.432.172.003.314-.185.318-.42.004-.236-.132-.429-.304-.432zm-3.58.172c-.05 0-.102.002-.155.008-.311.05-.483.152-.593.247-.094.082-.152.173-.152.237a.075.075 0 0 0 .075.076c.07 0 .228-.063.228-.063a1.98 1.98 0 0 1 1.001-.104c.157.018.23.027.265-.026.01-.016.022-.049-.01-.1-.063-.103-.311-.269-.66-.275zm2.26.4c-.127 0-.235.051-.283.148-.075.154.035.363.246.466.21.104.443.063.52-.09.075-.155-.035-.364-.246-.467a.542.542 0 0 0-.237-.058zm-11.635.024c.048 0 .098 0 .149.003.73.04 1.806.6 2.052 2.19.217 1.41-.128 2.843-1.449 3.069-.123.02-.248.029-.374.026-1.22-.033-2.539-1.132-2.67-2.435-.145-1.44.591-2.548 1.894-2.811.117-.024.252-.04.398-.042zm-.07.927a1.144 1.144 0 0 0-.847.364c-.38.418-.439.988-.366 1.19.027.073.07.094.1.098.064.008.16-.039.22-.2a1.2 1.2 0 0 0 .017-.052 1.58 1.58 0 0 1 .157-.37.689.689 0 0 1 .955-.199c.266.174.369.5.255.81-.058.161-.154.469-.133.721.043.511.357.717.64.738.274.01.466-.143.515-.256.029-.067.005-.107-.011-.125-.043-.053-.113-.037-.18-.021a.638.638 0 0 1-.16.022.347.347 0 0 1-.294-.148c-.078-.12-.073-.3.013-.504.011-.028.025-.058.04-.092.138-.308.368-.825.11-1.317-.195-.37-.513-.602-.894-.65a1.135 1.135 0 0 0-.138-.01z"/></symbol><symbol id="i-elevenlabs" viewBox="0 0 24 24"><path d="M4.6035 0v24h4.9317V0zm9.8613 0v24h4.9317V0z"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><symbol id="i-netlify" viewBox="0 0 24 24"><path d="M6.49 19.04h-.23L5.13 17.9v-.23l1.73-1.71h1.2l.15.15v1.2L6.5 19.04ZM5.13 6.31V6.1l1.13-1.13h.23L8.2 6.68v1.2l-.15.15h-1.2L5.13 6.31Zm9.96 9.09h-1.65l-.14-.13v-3.83c0-.68-.27-1.2-1.1-1.23-.42 0-.9 0-1.43.02l-.07.08v4.96l-.14.14H8.9l-.13-.14V8.73l.13-.14h3.7a2.6 2.6 0 0 1 2.61 2.6v4.08l-.13.14Zm-8.37-2.44H.14L0 12.82v-1.64l.14-.14h6.58l.14.14v1.64l-.14.14Zm17.14 0h-6.58l-.14-.14v-1.64l.14-.14h6.58l.14.14v1.64l-.14.14ZM11.05 6.55V1.64l.14-.14h1.65l.14.14v4.9l-.14.14h-1.65l-.14-.13Zm0 15.81v-4.9l.14-.14h1.65l.14.13v4.91l-.14.14h-1.65l-.14-.14Z"/></symbol><symbol id="i-zapier" viewBox="0 0 24 24"><path d="M4.157 0A4.151 4.151 0 0 0 0 4.161v15.678A4.151 4.151 0 0 0 4.157 24h15.682A4.152 4.152 0 0 0 24 19.839V4.161A4.152 4.152 0 0 0 19.839 0H4.157Zm10.61 8.761h.03a.577.577 0 0 1 .23.038.585.585 0 0 1 .201.124.63.63 0 0 1 .162.431.612.612 0 0 1-.162.435.58.58 0 0 1-.201.128.58.58 0 0 1-.23.042.529.529 0 0 1-.235-.042.585.585 0 0 1-.332-.328.559.559 0 0 1-.038-.235.613.613 0 0 1 .17-.431.59.59 0 0 1 .405-.162Zm2.853 1.572c.03.004.061.004.095.004.325-.011.646.064.937.219.238.144.431.355.552.609.128.279.189.582.185.888v.193a2 2 0 0 1 0 .219h-2.498c.003.227.075.45.204.642a.78.78 0 0 0 .646.265.714.714 0 0 0 .484-.136.642.642 0 0 0 .23-.318l.915.257a1.398 1.398 0 0 1-.28.537c-.14.159-.321.284-.521.355a2.234 2.234 0 0 1-.836.136 1.923 1.923 0 0 1-1.001-.245 1.618 1.618 0 0 1-.665-.703 2.221 2.221 0 0 1-.227-1.036 1.95 1.95 0 0 1 .48-1.398 1.9 1.9 0 0 1 1.3-.488Zm-9.607.023c.162.004.325.026.48.079.207.065.4.174.563.314.26.302.393.692.366 1.088v2.276H8.53l-.109-.711h-.065c-.064.163-.155.31-.272.439a1.122 1.122 0 0 1-.374.264 1.023 1.023 0 0 1-.453.083 1.334 1.334 0 0 1-.866-.264.965.965 0 0 1-.329-.801.993.993 0 0 1 .076-.431 1.02 1.02 0 0 1 .242-.363 1.478 1.478 0 0 1 1.043-.303h.952v-.181a.696.696 0 0 0-.136-.454.553.553 0 0 0-.438-.154.695.695 0 0 0-.378.086.48.48 0 0 0-.193.254l-.99-.144a1.26 1.26 0 0 1 .257-.563c.14-.174.321-.302.533-.378.261-.091.54-.136.82-.129.053-.003.106-.007.163-.007Zm4.384.007c.174 0 .347.038.506.114.182.083.34.211.458.374.257.423.377.911.351 1.406a2.53 2.53 0 0 1-.355 1.448 1.148 1.148 0 0 1-1.009.517c-.204 0-.401-.045-.582-.136a1.052 1.052 0 0 1-.48-.457 1.298 1.298 0 0 1-.114-.234h-.045l.004 1.784h-1.059v-4.713h.904l.117.805h.057c.068-.208.177-.401.328-.56a1.129 1.129 0 0 1 .843-.344h.076v-.004Zm7.559.084h.903l.113.805h.053a1.37 1.37 0 0 1 .235-.484.813.813 0 0 1 .313-.242.82.82 0 0 1 .39-.076h.234v1.051h-.401a.662.662 0 0 0-.313.008.623.623 0 0 0-.272.155.663.663 0 0 0-.174.26.683.683 0 0 0-.027.314v1.875h-1.054v-3.666Zm-17.515.003h3.262v.896L3.73 13.104l.034.113h1.973l.042.9H2.4v-.9l1.931-1.754-.045-.117H2.441v-.896Zm11.815 0h1.055v3.659h-1.055V10.45Zm3.443.684.019.016a.69.69 0 0 0-.351.045.756.756 0 0 0-.287.204c-.11.155-.174.336-.189.522h1.545c-.034-.526-.257-.787-.74-.787h.003Zm-5.718.163c-.026 0-.057 0-.083.004a.78.78 0 0 0-.31.053.746.746 0 0 0-.257.189 1.016 1.016 0 0 0-.204.695v.064c-.015.257.057.507.204.711a.634.634 0 0 0 .253.196.638.638 0 0 0 .314.061.644.644 0 0 0 .578-.265c.14-.223.204-.48.189-.74a1.216 1.216 0 0 0-.181-.711.677.677 0 0 0-.503-.257Zm-4.509 1.266a.464.464 0 0 0-.268.102.373.373 0 0 0-.114.276c0 .053.008.106.027.155a.375.375 0 0 0 .087.132.576.576 0 0 0 .397.11v.004a.863.863 0 0 0 .563-.182.573.573 0 0 0 .211-.457v-.14h-.903Z"/></symbol></svg>
 
-<header>
-  <div class="wrap">
-    <a class="name" href="#top">Felipe Garzon</a>
-    <nav>
-      <a href="#why" class="hide-sm">Why me</a>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="mark" aria-label="Felipe Garzon, home"><span class="name">Felipe Garzon</span><small id="tagline">Web · Automation · AI Agents</small></a>
+    <div class="nav-right">
+    <nav class="menu" id="menu">
       <a href="#work">Work</a>
-      <a href="#experience" class="hide-sm">Experience</a>
-      <a href="Felipe-Garzon-Resume.pdf">Resume</a>
+      <a href="#services">Services</a>
+      <a href="#video">AI Video</a>
+      <a href="#products">Apps &amp; AI</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="cta">Contact</a>
     </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch between light and dark mode">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="burger" id="burger" aria-label="Open menu">Menu</button>
+    </div>
   </div>
 </header>
 
-<main id="top" class="wrap">
-
-  <div class="hero">
-    <div>
-      <h1>I'm a founder who builds on Vercel. I want to help other founders do it well.</h1>
-      <p class="lede">I built and run Orvinn, a live AI marketing platform on Next.js and Vercel, using AI coding agents from the first commit to live billing. Before that, I spent years owning revenue directly, in real estate and social commerce.</p>
-      <div class="cta">
-        <a class="btn primary" href="#work">See what I've built</a>
-        <a class="btn" href="Felipe-Garzon-Resume.pdf">Download resume</a>
-      </div>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <canvas id="pixels" aria-hidden="true"></canvas>
+  <div class="hero-card">
+    <span class="label">Felipe Garzon · Miami, FL</span>
+    <h1 class="light">WordPress websites, automation &amp; AI agents that grow your business.</h1>
+    <p>I design and build sites that look premium and bring in customers, then connect them to the automations and AI tools that keep your business running.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-dark">Start a project</a>
+      <a href="#work" class="btn btn-line">See the work</a>
     </div>
+    <a class="resume-link" href="Felipe_Garzon_Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download resume (PDF)</a>
+  </div>
+  <div class="scroll">Scroll</div>
+</section>
 
-    <div class="log" aria-label="Things I've shipped on Orvinn">
-      <div class="log-top"><span>orvinn.app</span><span>Production</span></div>
-      <ol>
-        <li><span class="dot"></span><span>Stripe billing: tiers, seats, metered usage</span><span class="state">Ready</span></li>
-        <li><span class="dot"></span><span>Square and Clover sales data</span><span class="state">Ready</span></li>
-        <li><span class="dot"></span><span>Mindbody, production approved</span><span class="state">Ready</span></li>
-        <li><span class="dot"></span><span>Mailchimp and Constant Contact export</span><span class="state">Ready</span></li>
-        <li><span class="dot"></span><span>Agency workspaces and team roles</span><span class="state">Ready</span></li>
-        <li><span class="dot"></span><span>AI review flow with version history</span><span class="state">Ready</span></li>
-        <li><span class="dot"></span><span>Status page and uptime monitoring</span><span class="state">Ready</span></li>
-      </ol>
+<!-- INTRO -->
+<div class="wrap">
+  <div class="intro reveal">
+    <p class="big">I'm a web builder with 20 years in design and the web. I build <b>WordPress and Shopify sites</b>, custom web apps and <b>AI-powered automations</b> <span class="m">for small businesses, agencies and real estate brands. From Miami, working with clients and teams anywhere, in English and Spanish.</span></p>
+    <div class="col"><span class="label">Available for</span>Remote WordPress roles<br>Website projects<br>Automation &amp; AI setups</div>
+    <div class="col"><span class="label">Contact</span><a class="ul" href="mailto:felogarzon@gmail.com">felogarzon@gmail.com</a><br><a class="ul" href="https://github.com/fgarzon78" target="_blank" rel="noopener">GitHub</a><br>Miami, Florida</div>
+  </div>
+</div>
+
+<!-- LOGOS -->
+<div class="wrap">
+  <div class="logos">
+    <div class="top reveal"><span class="label">Tools I build with</span><p>The platforms and tools behind my work.</p></div>
+    <div class="logo-grid reveal">
+      <div class="lg"><svg><use href="#i-wordpress"/></svg><span>WordPress</span></div>
+      <div class="lg"><svg><use href="#i-shopify"/></svg><span>Shopify</span></div>
+      <div class="lg"><svg><use href="#i-claude"/></svg><span>Claude</span></div>
+      <div class="lg"><svg><use href="#i-openai"/></svg><span>ChatGPT</span></div>
+      <div class="lg"><svg><use href="#i-make"/></svg><span>Make.com</span></div>
+      <div class="lg"><svg><use href="#i-nodedotjs"/></svg><span>Node.js</span></div>
+      <div class="lg"><svg><use href="#i-html5"/></svg><span>HTML5</span></div>
+      <div class="lg"><svg><use href="#i-css"/></svg><span>CSS</span></div>
+      <div class="lg"><svg><use href="#i-javascript"/></svg><span>JavaScript</span></div>
+      <div class="lg"><svg><use href="#i-nextdotjs"/></svg><span>Next.js</span></div>
+      <div class="lg"><svg><use href="#i-supabase"/></svg><span>Supabase</span></div>
+      <div class="lg"><svg><use href="#i-stripe"/></svg><span>Stripe</span></div>
+      <div class="lg"><svg><use href="#i-vercel"/></svg><span>Vercel</span></div>
+      <div class="lg"><svg><use href="#i-netlify"/></svg><span>Netlify</span></div>
+      <div class="lg"><svg><use href="#i-mailchimp"/></svg><span>Mailchimp</span></div>
+      <div class="lg"><svg><use href="#i-elevenlabs"/></svg><span>ElevenLabs</span></div>
+      <div class="lg"><svg><use href="#i-zapier"/></svg><span>Zapier</span></div>
+      <div class="lg"><svg><use href="#i-github"/></svg><span>GitHub</span></div>
     </div>
   </div>
+</div>
 
-  <section id="why">
-    <h2>I've sat on the founder's side of the table, and I've carried a number.</h2>
-    <div class="why">
-      <div>
-        <h3>I've made the early calls</h3>
-        <p>Pricing, how to keep each client's data separate, which outside services to connect, how to bill for usage without surprising customers. I've made those decisions and lived with the tradeoffs, so I can talk with founders about theirs.</p>
+<!-- SERVICES -->
+<section id="services" class="inv">
+  <div class="wrap">
+    <div class="services-head reveal">
+      <div><span class="label">Services</span><h2 class="light" style="margin-top:18px">What I can build<br>for you</h2></div>
+      <p>Clear scope, a polished result, and a site you can update yourself. Every project is built to look premium and bring in business.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <span class="no">01</span>
+        <h3>WordPress Websites</h3>
+        <p>Custom business websites that are fast, mobile friendly and easy for your team to edit, with the pages and forms you need.</p>
+        <div class="uses"><svg style="fill:var(--fg)"><use href="#i-wordpress"/></svg><svg style="fill:var(--fg)"><use href="#i-html5"/></svg><svg style="fill:var(--fg)"><use href="#i-css"/></svg></div>
+        <ul><li>Custom design on WordPress and Kadence</li><li>Contact forms, member logins and document libraries</li><li>Search engine basics and fast load times</li><li>Training so you can update it yourself</li></ul>
       </div>
-      <div>
-        <h3>I work the way AI-native teams work</h3>
-        <p>I build with AI coding agents every day. Claude writes the code; I own the product, the decisions, and the shipping. That's the shift many of Vercel's startup customers are going through right now.</p>
+      <div class="svc reveal">
+        <span class="no">02</span>
+        <h3>Shopify Stores</h3>
+        <p>Online stores that are clean, on-brand and set up to sell, with social media and email ready to go.</p>
+        <div class="uses"><svg style="fill:var(--fg)"><use href="#i-shopify"/></svg><svg style="fill:var(--fg)"><use href="#i-stripe"/></svg><svg style="fill:var(--fg)"><use href="#i-mailchimp"/></svg></div>
+        <ul><li>Store setup, theme and product pages</li><li>Payments, shipping and taxes configured</li><li>Email and Instagram sales connected</li><li>Product photos and visual design</li></ul>
       </div>
-      <div>
-        <h3>I own outcomes, not just conversations</h3>
-        <p>$4.7M+ in documented real estate sales and $100K+ in social commerce sales, each built on trust and follow-through. The best deals I've closed came from clients who were genuinely better off.</p>
+      <div class="svc reveal">
+        <span class="no">03</span>
+        <h3>Automation &amp; AI</h3>
+        <p>Your apps working together, with AI handling the repeat work like posting, emails, follow-ups and even video.</p>
+        <div class="uses"><svg style="fill:var(--fg)"><use href="#i-make"/></svg><svg style="fill:var(--fg)"><use href="#i-claude"/></svg><svg style="fill:var(--fg)"><use href="#i-openai"/></svg></div>
+        <ul><li>Make.com and Zapier automations</li><li>AI content with Claude and ChatGPT</li><li>Auto-posting to social media</li><li>Custom AI agents for your business</li><li>AI-generated videos, images and voiceovers</li></ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="work">
-    <h2>What I've built</h2>
-    <p class="sub">Real products, live today, with the decisions behind them.</p>
-
-    <div class="feature">
-      <div class="shot">
-        <img src="assets/orvinn-dashboard.png" alt="Orvinn dashboard in dark mode showing the content queue and sidebar navigation" loading="lazy">
-      </div>
+<!-- RECENT PROJECTS: INSTAGRAM-STYLE GRID -->
+<section id="work" class="gallery">
+  <div class="wrap">
+    <div class="ig-profile reveal">
       <div>
-        <h3>Orvinn</h3>
-        <p class="meta">Founder and product builder · 2025 to present</p>
-        <p style="margin-top:14px">AI marketing automation for small businesses, real estate professionals, and agencies. It turns a business's own data, like sales, class schedules, and listings, into social posts, email campaigns, and reports.</p>
-        <ul>
-          <li>Subscription billing with three tiers, per-seat pricing, and metered overages through Stripe.</li>
-          <li>Connections to Square, Clover, Mindbody, Mailchimp, Constant Contact, and Facebook, Instagram, and Google publishing, built on one shared pattern so each new provider is faster than the last.</li>
-          <li>An agency mode where one account manages many client workspaces, with team roles and an AI-assisted review and approval flow.</li>
-          <li>GitHub-to-Vercel deploys, scheduled background jobs, and a public status page.</li>
-        </ul>
-        <div class="stack">
-          <span>Next.js App Router</span><span>Vercel</span><span>Supabase</span><span>Stripe</span><span>Claude API</span><span>Resend</span><span>Cloudinary</span>
+        <div class="ig-name"><h2>Recent projects</h2><a href="#contact">Work with me</a></div>
+        <div class="ig-stats"><span><b>20+</b> years</span><span><b>2</b> languages</span></div>
+        <p class="ig-bio"><strong>Felipe Garzon</strong> · Websites, apps, automation and AI. Every project here is live. Tap a tile to visit it.</p>
+      </div>
+    </div>
+    <div class="ig-tabs"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>Projects</span></div>
+    <div class="ig-grid">
+      <a class="ig-tile reveal" href="https://garzonre.com/" target="_blank" rel="noopener">
+        <div class="ph">GarzonRE</div><img loading="lazy" alt="GarzonRE website" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgarzonre.com%2F?w=1000&h=1000" onerror="this.remove()"><svg class="type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <div class="over"><b>GarzonRE</b><span>WordPress · Kadence</span><p>Bilingual website for a Miami real estate brand, with a custom gold, ink and cream look.</p><i>Visit site</i></div>
+      </a>
+      <a class="ig-tile reveal" href="https://orvinn.app/" target="_blank" rel="noopener">
+        <div class="ph">Orvinn</div><img loading="lazy" alt="Orvinn website" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Forvinn.app%2F?w=1000&h=1000" onerror="this.remove()"><svg class="type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <div class="over"><b>Orvinn</b><span>Web app · AI marketing</span><p>Marketing site and full app for my AI marketing platform.</p><i>Visit site</i></div>
+      </a>
+      <div class="ig-tile reveal">
+        <div class="post mono">
+          <small>Make.com automation</small>
+          <div class="big">Claude writes it.<br>Make.com posts it.</div>
+          <div class="logos-row"><svg><use href="#i-make"/></svg><svg><use href="#i-claude"/></svg><svg><use href="#i-elevenlabs"/></svg></div>
         </div>
-        <p class="lesson">A lesson I'd share with any founder: I first capped usage by counting AI generations, then realized customers think in published posts. Pricing on what the customer values, with a separate quiet limit to protect AI costs, is the cleaner design, and it's what I'm moving to.</p>
-        <p style="margin-top:18px;display:flex;gap:22px;flex-wrap:wrap"><a class="textlink" href="https://github.com/fgarzon78/orvinn-case-study">Read the full case study</a><a class="textlink" href="https://orvinn.app">Visit orvinn.app</a></p>
+        <div class="over"><b>Instagram content engine</b><span>Make.com · Claude · Placid · ElevenLabs</span><p>Branded posts and Reels for GarzonRE, written, designed and published automatically.</p></div>
+      </div>
+      <a class="ig-tile reveal" href="https://lucasnode.app/" target="_blank" rel="noopener">
+        <div class="ph">Lucas</div><img loading="lazy" alt="Lucas website" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Flucasnode.app%2F?w=1000&h=1000" onerror="this.remove()"><svg class="type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <div class="over"><b>Lucas</b><span>AI agent</span><p>Website for my AI research agent, which other AI agents pay per request.</p><i>Visit site</i></div>
+      </a>
+      <a class="ig-tile reveal" href="https://www.instagram.com/ricambioem/" target="_blank" rel="noopener">
+        <div class="post dark">
+          <small>Instagram sales channel</small>
+          <div class="big">$100K+</div>
+          <small>in 10 months · Ricambi OEM</small>
+        </div><svg class="type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <div class="over"><b>Ricambi OEM</b><span>Social media &amp; design</span><p>Built and ran the Instagram store: $18K in the first 25 days and $100K+ in ten months.</p><i>View on Instagram</i></div>
+      </a>
+      <a class="ig-tile reveal" href="https://routehelper.netlify.app/" target="_blank" rel="noopener">
+        <div class="ph">Route Helper</div><img loading="lazy" alt="Route Helper website" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Froutehelper.netlify.app%2F?w=1000&h=1000" onerror="this.remove()"><svg class="type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <div class="over"><b>Route Helper</b><span>Web app · Operations</span><p>A simple tool for delivery teams to plan delivery times and work out driver pay.</p><i>Open app</i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AI GENERATIVE VIDEO -->
+<section id="video">
+  <div class="wrap gen">
+    <div class="reveal">
+      <div class="phone">
+        <span class="tag">Made with AI</span>
+        <video id="reel" muted loop playsinline preload="metadata" aria-label="Brisa Cold Brew launch Reel, made with AI">
+          <source src="brisa.mp4" type="video/mp4">
+          <source src="https://zqetssozqghtnylxaojl.supabase.co/storage/v1/object/public/deliverables/00000000-0000-0000-0000-0000000a1c11/video-mvy5h4tm.mp4" type="video/mp4">
+        </video>
+        <button class="sound" id="sound" type="button" aria-label="Turn sound on"><svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="x" d="M17 9l5 6M22 9l-5 6"/></svg></button>
       </div>
     </div>
+    <div class="reveal">
+      <span class="label">AI generative video</span>
+      <h2 class="light">A launch Reel with<br>no camera and no crew.</h2>
+      <p>This 15-second Instagram Reel for Brisa, a Miami coffee shop concept, was made entirely with AI. Every shot, the music, the on-screen text and the closing card were created and edited by my AI agent, Lucas, from a two-sentence brief.</p>
+      <p>It's the same kind of content I can produce for businesses: launch videos, Reels, product shots and social posts, on brand and ready to publish in minutes instead of days.</p>
+      <ol class="steps">
+        <li><b>Brief</b> <span style="grid-column:2">"A 15-second Reel announcing Brisa's new cold brew. Warm morning light."</span></li>
+        <li><b>Shot list</b> <span style="grid-column:2">Lucas plans five scenes and the story order.</span></li>
+        <li><b>AI shots</b> <span style="grid-column:2">Each scene is generated as a short video clip.</span></li>
+        <li><b>Edit</b> <span style="grid-column:2">Clips are trimmed, captioned, set to music and finished with a branded end card.</span></li>
+      </ol>
+      <div class="stack"><span><svg style="fill:var(--fg)"><use href="#i-claude"/></svg>Claude</span><span>fal.ai video models</span><span><svg style="fill:var(--fg)"><use href="#i-elevenlabs"/></svg>ElevenLabs</span><span>Lucas AI agent</span></div>
+    </div>
+  </div>
+</section>
 
-    <div class="others">
-      <div class="other">
-        <div class="big">$4.7M+</div>
-        <h3>GarzonRE</h3>
-        <p>Bilingual Miami real estate brand, brokered by Fortune Christie's International Real Estate. Documented sales from first conversation to closing.</p>
-        <a class="textlink" href="https://garzonre.com/">Visit garzonre.com</a>
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="g-head reveal">
+      <div><span class="label">Apps, agents &amp; automation</span><h2 class="light" style="margin-top:18px">Products I've built<br>and run</h2></div>
+      <p>Proof that I can take an idea from a blank page to a working product, and keep it running.</p>
+    </div>
+
+    <div class="prod reveal">
+      <div class="no">01</div>
+      <div>
+        <span class="label">AI marketing platform</span>
+        <h3>Orvinn</h3>
+        <p>An all-in-one marketing tool for small businesses, real estate agents and agencies. It writes social posts with AI, schedules them, sends email campaigns and pulls in sales data so owners know what to promote.</p>
+        <div class="stack"><span><svg style="fill:var(--fg)"><use href="#i-nextdotjs"/></svg>Next.js</span><span><svg style="fill:var(--fg)"><use href="#i-nodedotjs"/></svg>Node.js</span><span><svg style="fill:var(--fg)"><use href="#i-supabase"/></svg>Supabase</span><span><svg style="fill:var(--fg)"><use href="#i-stripe"/></svg>Stripe</span><span><svg style="fill:var(--fg)"><use href="#i-claude"/></svg>Claude</span><span><svg style="fill:var(--fg)"><use href="#i-openai"/></svg>OpenAI</span></div>
+        <div class="links"><a class="ul" href="https://orvinn.app/" target="_blank" rel="noopener">Visit orvinn.app</a><a class="ul" href="https://github.com/fgarzon78/orvinn-case-study" target="_blank" rel="noopener">Read the case study</a></div>
       </div>
-      <div class="other">
-        <div class="big">$100K+</div>
-        <h3>Ricambi OEM</h3>
-        <p>Owned the Instagram sales channel: $18K in a single 25-day stretch and $100K+ over ten months.</p>
-        <a class="textlink" href="https://www.instagram.com/ricambioem/">View on Instagram</a>
-      </div>
-      <div class="other">
-        <div class="big">AI agent</div>
+      <ul><li>Connects to Square, Clover, Mindbody, Mailchimp, Constant Contact, Facebook, Instagram and Google</li><li>Team review inbox where AI makes edits and a person approves them</li><li>Plans, free trials and per-seat billing through Stripe</li><li>Weekly AI reports built from real engagement numbers</li></ul>
+    </div>
+
+    <div class="prod reveal">
+      <div class="no">02</div>
+      <div>
+        <span class="label">Autonomous AI agent</span>
         <h3>Lucas</h3>
-        <p>An AI agent that sells sourced research to other AI agents. Agents pay per request in USDC through the x402 protocol, with no account or API key, and every claim comes back with a source or is marked unverified. Built on Next.js and Vercel with Supabase and Claude, and listed in Coinbase's x402 Bazaar and on x402-list. It also finds and bids on tasks on AI agent marketplaces, with guardrails I can tighten or loosen at any time.</p>
-        <a class="textlink" href="https://lucasnode.app">Visit lucasnode.app</a><br />
-        <a class="textlink" href="https://github.com/fgarzon78/lucas-examples">See the examples on GitHub</a>
+        <p>An AI agent that finds work, bids on it and delivers it by itself. Lucas works on AI agent marketplaces and sells research to other AI agents, which pay per request. It landed its first paid client job in November 2026.</p>
+        <div class="stack"><span><svg style="fill:var(--fg)"><use href="#i-claude"/></svg>Claude</span><span><svg style="fill:var(--fg)"><use href="#i-supabase"/></svg>Supabase</span><span><svg style="fill:var(--fg)"><use href="#i-vercel"/></svg>Vercel</span><span>Exa search</span><span>e2b sandbox</span></div>
+        <div class="links"><a class="ul" href="https://lucasnode.app/" target="_blank" rel="noopener">Visit lucasnode.app</a></div>
       </div>
-      <div class="other">
-        <div class="big">Live app</div>
+      <ul><li>Fact checks, research, data analysis and lead lists, every answer backed by a source</li><li>Active on toku.agency, Bounty and dealwork.ai</li><li>Builds and hosts client websites on its own</li><li>Safety limits I can add or remove at any time</li></ul>
+    </div>
+
+    <div class="prod reveal">
+      <div class="no">03</div>
+      <div>
+        <span class="label">Make.com automation</span>
+        <h3>Instagram content engine</h3>
+        <p>A hands-off social media system for GarzonRE. Make.com runs the whole flow: Claude writes the post, Placid turns it into branded graphics and video, ElevenLabs adds a voiceover, and it publishes to Instagram on schedule.</p>
+        <div class="stack"><span><svg style="fill:var(--fg)"><use href="#i-make"/></svg>Make.com</span><span><svg style="fill:var(--fg)"><use href="#i-claude"/></svg>Claude API</span><span><svg style="fill:var(--fg)"><use href="#i-elevenlabs"/></svg>ElevenLabs</span><span>Placid</span><span>Buffer</span></div>
+      </div>
+      <ul><li>Market updates, buyer and seller tips, and neighborhood guides on autopilot</li><li>On-brand designs every time, no manual editing</li><li>Short videos with voiceover for Reels</li></ul>
+    </div>
+
+    <div class="prod reveal">
+      <div class="no">04</div>
+      <div>
+        <span class="label">Operations web app</span>
         <h3>Route Helper</h3>
-        <p>A small operations app for coordinating delivery times and calculating driver payouts.</p>
-        <a class="textlink" href="https://routehelper.netlify.app/">Open Route Helper</a>
+        <p>A lightweight web tool for a real everyday problem: coordinating delivery times and calculating driver pay, without spreadsheets or guesswork.</p>
+        <div class="stack"><span><svg style="fill:var(--fg)"><use href="#i-html5"/></svg>HTML</span><span><svg style="fill:var(--fg)"><use href="#i-css"/></svg>CSS</span><span><svg style="fill:var(--fg)"><use href="#i-netlify"/></svg>Netlify</span></div>
+        <div class="links"><a class="ul" href="https://routehelper.netlify.app/" target="_blank" rel="noopener">Open Route Helper</a></div>
+      </div>
+      <ul><li>Plan delivery windows in one place</li><li>Driver payouts worked out automatically</li><li>Works on a phone, right from the truck</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<div class="numbers inv">
+  <div class="wrap">
+    <div class="reveal"><b>20+</b><span>Years in design and the web</span></div>
+    <div class="reveal"><b>12</b><span>Medical websites maintained</span></div>
+    <div class="reveal"><b>$100K+</b><span>Online sales from a channel I built</span></div>
+    <div class="reveal"><b>2</b><span>Languages: English &amp; Spanish</span></div>
+  </div>
+</div>
+
+<!-- ABOUT / EXPERIENCE -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="txt reveal">
+      <span class="label">About</span>
+      <p class="lead">A designer's eye, a marketer's sense of what sells, and AI agents that help do the work.</p>
+      <p>I started in graphic and web design, then spent four years at MEDNAX Medical Group keeping 12 medical-practice websites current across the country. After that I worked in marketing, grew an Instagram store to $100K+ in sales in ten months, and closed $4.7M+ in Miami real estate.</p>
+      <p>Today I design and direct every project and use Claude and ChatGPT every day to write code, content and automations faster. Clients get polished work in less time, and I can take a site from blank page to launch on my own.</p>
+      <p>I also build AI agents. My agent, Lucas, finds jobs on AI marketplaces, bids on them and delivers the work on its own: sourced research, lead lists, images, websites and AI-generated videos. Other AI agents can even hire it and pay per request. Building Lucas taught me how to give an agent the right tools, clear rules and a way to check its own work, and I bring that same approach to agents and automations for businesses.</p>
+      <div class="edu">
+        <span class="label">Education</span>
+        <div><b>Bachelor's, Multimedia &amp; Web Design</b><span>The Art Institute of Fort Lauderdale · 2006</span></div>
+        <div><b>Associate, Graphic Design</b><span>The Art Institute of Fort Lauderdale · 2004</span></div>
       </div>
     </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ol class="timeline">
-      <li><span class="yr">2025 – now</span><div><b>Founder and product builder, Orvinn (Garzon Labs)</b><p>Building and running an AI marketing platform on Vercel.</p></div></li>
-      <li><span class="yr">Current</span><div><b>Licensed Florida realtor and founder, GarzonRE</b><p>Miami and Brickell, brokered by Fortune Christie's International Real Estate. $4.7M+ in documented sales.</p></div></li>
-      <li><span class="yr">2020 – 2024</span><div><b>Social media and design production manager, Ricambi OEM</b><p>Owned the Instagram sales channel and product catalog.</p></div></li>
-      <li><span class="yr">2017 – 2018</span><div><b>Marketing coordinator, Riva Motorsports</b><p>Campaigns, email, web, and monthly events of about 120 attendees.</p></div></li>
-      <li><span class="yr">2013 – 2017</span><div><b>Web production specialist, MEDNAX Medical Group</b><p>Maintained 12 medical-practice websites and turned technical healthcare information into clear communication.</p></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="contact">
-      <h2>Let's talk.</h2>
-      <div class="links">
-        <a href="mailto:felogarzon@gmail.com">felogarzon@gmail.com</a><br>
-        <a href="tel:+13058773268">305-877-3268</a><br>
-        <a href="https://github.com/fgarzon78">github.com/fgarzon78</a>
-      </div>
+    <div class="reveal">
+      <span class="label">Experience</span>
+      <ul class="xp" style="margin-top:22px">
+        <li><span class="yr">2025 – Present</span><div><h4>Founder &amp; Product Builder</h4><div class="org">Orvinn · Remote</div><p>Designed, built and run an AI marketing platform with 8+ app connections, Stripe billing and AI workflows.</p></div></li>
+        <li><span class="yr">2026 – Present</span><div><h4>Builder, Lucas AI Agent</h4><div class="org">Independent project</div><p>An AI agent that wins and completes work on AI marketplaces on its own.</p></div></li>
+        <li><span class="yr">Current</span><div><h4>Licensed Realtor &amp; Founder</h4><div class="org">GarzonRE · Fortune Christie's International Real Estate</div><p>Closed $4.7M+ in sales. Built the bilingual WordPress site and automated the brand's social media.</p></div></li>
+        <li><span class="yr">2020 – 2024</span><div><h4>Social Media &amp; Design Production Manager</h4><div class="org">Ricambi OEM</div><p>Built the Instagram sales channel: $18K in the first 25 days and $100K+ in ten months.</p></div></li>
+        <li><span class="yr">2017 – 2018</span><div><h4>Marketing Coordinator</h4><div class="org">Riva Motorsports</div><p>Email, web, social and event campaigns, including monthly events of about 120 people.</p></div></li>
+        <li><span class="yr">2013 – 2017</span><div><h4>Web Production Specialist</h4><div class="org">MEDNAX Medical Group</div><p>Maintained 12 medical-practice websites nationwide and trained practice staff on web tools.</p></div></li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
+<!-- CTA -->
+<section id="contact" class="cta">
+  <div class="wrap reveal">
+    <span class="label">Let's work together</span>
+    <h2 class="light">Have a project in mind?</h2>
+    <p>Hiring a remote WordPress builder, or need a website, store, automation or AI agent? Tell me about it. I reply within one business day.</p>
+    <div class="row">
+      <a class="btn btn-dark" href="mailto:felogarzon@gmail.com?subject=New%20project">Email me</a>
+      <a class="btn btn-line" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=felogarzon@gmail.com&amp;su=New%20project" target="_blank" rel="noopener">Open in Gmail</a>
+      <button class="btn btn-line" type="button" id="copy" data-email="felogarzon@gmail.com">Copy email</button>
+      <a class="btn btn-line" href="Felipe_Garzon_Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Resume</a>
+    </div>
+    <p class="addr">felogarzon@gmail.com</p>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer>
-  <div class="wrap">Felipe Garzon · Doral, Florida · English and Spanish</div>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-about">
+        <p>Felipe Garzon builds WordPress and Shopify websites, automations and AI agents for small businesses, agencies and real estate brands. Available for remote roles and client projects, in English and Spanish.</p>
+        <p class="ft-legal">© <span id="yr">2026</span> Felipe Garzon · Miami, Florida · <a href="#top">Back to top ↑</a></p>
+      </div>
+      <div class="ft-cols">
+        <div><span class="ft-label">Contact</span><a href="mailto:felogarzon@gmail.com">Email</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=felogarzon@gmail.com&amp;su=Hello%20Felipe" target="_blank" rel="noopener">Gmail</a><a href="https://github.com/fgarzon78" target="_blank" rel="noopener">GitHub</a><a href="Felipe_Garzon_Resume.pdf" download>Resume (PDF)</a></div>
+        <div><span class="ft-label">Projects</span><a href="https://garzonre.com/" target="_blank" rel="noopener">GarzonRE</a><a href="https://orvinn.app/" target="_blank" rel="noopener">Orvinn</a><a href="https://lucasnode.app/" target="_blank" rel="noopener">Lucas</a><a href="https://routehelper.netlify.app/" target="_blank" rel="noopener">Route Helper</a></div>
+        <div><span class="ft-label">Resources</span><a href="https://github.com/fgarzon78/orvinn-case-study" target="_blank" rel="noopener">Case study</a><a href="agents.html">For AI agents</a><a href="llms.txt">llms.txt</a></div>
+      </div>
+    </div>
+    <div class="ft-big" aria-hidden="true">For Hire<span class="ft-star">*</span></div>
+  </div>
 </footer>
 
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // header turns solid after the hero
+  const hdr = document.getElementById('hdr');
+  const onScroll = () => hdr.classList.toggle('solid', scrollY > 40);
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // mobile menu
+  const menu = document.getElementById('menu');
+  document.getElementById('burger').addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // wordmark: stretch the tagline to the exact width of the name
+  function fitMark(){
+    const name = document.querySelector('.mark .name'), tag = document.getElementById('tagline');
+    tag.style.letterSpacing = '0px';
+    const extra = name.getBoundingClientRect().width - tag.getBoundingClientRect().width;
+    tag.style.letterSpacing = Math.max(0, extra / tag.textContent.length) + 'px';
+    tag.style.marginRight = '-' + tag.style.letterSpacing;
+  }
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(fitMark);
+  addEventListener('resize', fitMark);
+
+  // light / dark toggle
+  document.getElementById('theme').addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    dispatchEvent(new Event('themechange'));
+  });
+
+  // copy email button
+  const copyBtn = document.getElementById('copy');
+  copyBtn.addEventListener('click', async () => {
+    const email = copyBtn.dataset.email;
+    try { await navigator.clipboard.writeText(email); }
+    catch (e) { const t = document.createElement('textarea'); t.value = email; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+    copyBtn.textContent = 'Copied ✓';
+    setTimeout(() => copyBtn.textContent = 'Copy email', 2000);
+  });
+
+  // hero: a few drifting pixels and two small pixel clusters that slowly form and dissolve
+  (function(){
+    const cv = document.getElementById('pixels'), ctx = cv.getContext('2d');
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const bayer = [0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5].map(v => (v + .5) / 16);
+    let tones = [];
+    const readTones = () => { const c = getComputedStyle(document.documentElement); tones = ['--px1','--px2','--px3'].map(v => c.getPropertyValue(v).trim()); };
+    readTones(); addEventListener('themechange', readTones);
+    let W, H, wide, dots = [], clusters = [];
+    const rand = (a, b) => a + Math.random() * (b - a);
+    function zoneX(){ return wide ? rand(W * 0.48, W * 1.05) : rand(-W * 0.05, W * 1.05); }
+    function zoneY(){ return rand(120, H * 1.05); }
+    function newCluster(delay){
+      return { x: zoneX(), y: rand(H * 0.3, H * 1.02), r: rand(180, wide ? 400 : 260), cell: wide ? 56 : 40, born: performance.now() / 1000 + delay, life: rand(7, 10), seed: Math.random() * 100 };
+    }
+    function size(){
+      const d = Math.min(devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight; wide = W > 720;
+      cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+      const n = wide ? 18 : 9;
+      dots = Array.from({length: n}, () => ({ x: zoneX(), y: zoneY(), s: [28, 36, 44, 56][Math.random() * 4 | 0], c: Math.random() < .25 ? 0 : Math.random() < .5 ? 1 : 2, v: rand(4, 12), ph: rand(0, 6.28), sp: rand(.4, 1.1) }));
+      clusters = [newCluster(0), newCluster(4.5)];
+    }
+    function draw(ms){
+      const t = ms / 1000;
+      ctx.clearRect(0, 0, W, H);
+      // single pixels drifting slowly upward and twinkling
+      dots.forEach(p => {
+        p.y -= p.v / 60;
+        if (p.y < 110) { p.y = H + 40; p.x = zoneX(); }
+        const a = 0.35 + 0.65 * Math.max(0, Math.sin(t * p.sp + p.ph));
+        ctx.globalAlpha = a; ctx.fillStyle = tones[p.c];
+        ctx.fillRect(Math.round(p.x), Math.round(p.y), p.s, p.s);
+      });
+      // pixel clusters: dithered shapes that appear, hold, and dissolve
+      clusters.forEach((c, n) => {
+        const age = (t - c.born) / c.life;
+        if (age < 0) return;
+        if (age > 1) { clusters[n] = newCluster(rand(.5, 2)); return; }
+        const phase = Math.sin(Math.PI * age);
+        const span = Math.ceil(c.r / c.cell);
+        for (let j = -span; j <= span; j++) for (let i = -span; i <= span; i++){
+          const wob = 0.18 * Math.sin(i * 0.9 + c.seed + t * 0.6) * Math.cos(j * 0.8 - t * 0.5);
+          const d = Math.hypot(i, j) / span + wob;
+          const v = (1 - d) * phase * 1.25;
+          const th = bayer[((j + 64) & 3) * 4 + ((i + 64) & 3)];
+          if (v > th){
+            ctx.globalAlpha = Math.min(1, (v - th) * 3);
+            ctx.fillStyle = v > th + 0.5 ? tones[0] : v > th + 0.25 ? tones[1] : tones[2];
+            ctx.fillRect(Math.round(c.x + i * c.cell), Math.round(c.y + j * c.cell), c.cell - 6, c.cell - 6);
+          }
+        }
+      });
+      ctx.globalAlpha = 1;
+      if (!still) requestAnimationFrame(draw);
+    }
+    size(); addEventListener('resize', size);
+    still ? draw(4000) : requestAnimationFrame(draw);
+  })();
+
+  // AI video: play only when on screen, sound toggle
+  (function(){
+    const v = document.getElementById('reel'), b = document.getElementById('sound');
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? v.play().catch(() => {}) : v.pause()), {threshold: .35}).observe(v);
+    b.addEventListener('click', () => {
+      v.muted = !v.muted;
+      if (!v.muted) v.play().catch(() => {});
+      b.querySelector('.x').style.display = v.muted ? '' : 'none';
+      b.setAttribute('aria-label', v.muted ? 'Turn sound on' : 'Turn sound off');
+    });
+  })();
+
+  // reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>

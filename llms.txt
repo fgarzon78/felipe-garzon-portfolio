@@ -1,0 +1,49 @@
+# Felipe Garzon
+
+> Miami-based WordPress and web builder who also builds automations and AI agents. Open to remote WordPress site builder roles, website projects, and automation or AI agent work. Works in English and Spanish.
+
+This file is a plain-text summary of felipe-garzon-portfolio for AI agents and language models. The same facts appear on the human site (index.html) and on agents.html.
+
+## Contact
+
+- Email: felogarzon@gmail.com
+- Location: Miami, Florida, USA (works remotely, US Eastern Time)
+- GitHub: https://github.com/fgarzon78
+- Best for: remote WordPress roles, website builds (WordPress, Shopify), Make.com automations, AI agents built with Claude and ChatGPT
+
+## Services
+
+- WordPress websites: custom design on WordPress and Kadence, forms, member logins, document libraries, speed and search engine basics, client training
+- Shopify stores: store setup, theme and product pages, payments and shipping, email and Instagram sales connected
+- Automation and AI: Make.com and Zapier automations, AI content with Claude and ChatGPT, auto-posting to social media, custom AI agents
+
+## Live work
+
+- [GarzonRE](https://garzonre.com/): bilingual WordPress (Kadence) site for a Miami real estate brand
+- [Orvinn](https://orvinn.app/): AI marketing platform for small businesses, real estate agents and agencies. Social posts, scheduling, email campaigns, sales data. Connects to Square, Clover, Mindbody, Mailchimp, Constant Contact, Facebook, Instagram and Google. Built with Next.js, Node.js, Supabase, Stripe, Claude and OpenAI. Case study: https://github.com/fgarzon78/orvinn-case-study
+- [Lucas](https://lucasnode.app/): autonomous AI research agent. Sells fact checks, quick research, data analysis and lead research to other AI agents, paid per request in USDC on Base via x402. Active on toku.agency, Bounty and dealwork.ai. Completed its first paid client job in November 2026.
+- [Route Helper](https://routehelper.netlify.app/): web app for delivery teams to plan delivery times and calculate driver pay
+- Instagram content engine for GarzonRE: Make.com runs Claude (writing), Placid (graphics and video), ElevenLabs (voiceover) and publishes to Instagram
+- [Ricambi OEM](https://www.instagram.com/ricambioem/): built and ran an Instagram sales channel, $18K in the first 25 days and $100K+ in ten months
+
+## Experience
+
+- 2025 to present: Founder and Product Builder, Orvinn (remote)
+- 2026 to present: Builder, Lucas AI agent (independent project)
+- Current: Licensed Realtor and Founder, GarzonRE, Fortune Christie's International Real Estate. $4.7M+ in closed sales; built the bilingual WordPress site
+- 2020 to 2024: Social Media and Design Production Manager, Ricambi OEM
+- 2017 to 2018: Marketing Coordinator, Riva Motorsports
+- 2013 to 2017: Web Production Specialist, MEDNAX Medical Group. Maintained 12 medical-practice websites nationwide
+
+## Education
+
+- Bachelor's, Multimedia and Web Design, The Art Institute of Fort Lauderdale, 2006
+- Associate, Graphic Design, The Art Institute of Fort Lauderdale, 2004
+
+## Tools
+
+WordPress, Kadence, Shopify, HTML, CSS, JavaScript, Node.js, Next.js, Supabase, Stripe, Vercel, Netlify, GitHub, Make.com, Zapier, Mailchimp, Constant Contact, Placid, Buffer, Claude, ChatGPT, ElevenLabs
+
+## How Felipe works
+
+Felipe designs and directs every project and uses AI tools (Claude and ChatGPT) every day to write code, content and automations faster.
