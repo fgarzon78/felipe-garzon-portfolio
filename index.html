@@ -185,6 +185,47 @@
 
 
 
+  /* how Lucas works diagram */
+  .hw-board{border:1px solid var(--line);background:var(--panel);padding:28px;border-radius:14px}
+  .hw-k{font-family:Jost,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-bottom:14px}
+  .hw-src{border:1px dashed var(--soft);border-radius:10px;padding:18px 20px;background:var(--bg)}
+  .hw-src-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+  .hw-src b,.hw-base b{display:block;font-weight:500;font-size:14px;margin-bottom:8px}
+  .hw-chips{display:flex;flex-wrap:wrap;gap:6px}
+  .hw-chips span{display:inline-flex;align-items:center;gap:6px;font-size:12px;border:1px solid var(--line);background:var(--bg);padding:4px 9px;border-radius:6px;color:var(--fg)}
+  .hw-chips svg{width:12px;height:12px;fill:var(--fg)}
+  .hw-down{display:flex;justify-content:center;height:30px}
+  .hw-down i{width:1.4px;height:100%;background:var(--soft);position:relative}
+  .hw-down i::after{content:"";position:absolute;bottom:-1px;left:50%;width:8px;height:8px;border-right:1.4px solid var(--soft);border-bottom:1.4px solid var(--soft);transform:translateX(-50%) rotate(45deg)}
+  .hw-steps{list-style:none;display:grid;grid-template-columns:1fr 22px 1fr 22px 1.25fr 22px 1fr 22px 1fr;align-items:stretch;gap:6px}
+  .prod .hw-steps > li{border-bottom:0;padding:0}
+  .prod .hw-steps > li:not(.hw-a){padding:16px 14px;border-bottom:1px solid var(--line)}
+  .prod .hw-steps > li.hw-work{border-bottom-color:var(--fg)}
+  .hw-steps > li:not(.hw-a){background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px 14px;position:relative;transition:border-color .25s,transform .25s}
+  .hw-steps > li:not(.hw-a):hover{border-color:var(--fg);transform:translateY(-2px)}
+  .hw-steps .hw-work{border-color:var(--fg) !important}
+  .hw-a{display:flex;align-items:center;justify-content:center;color:var(--soft)}
+  .hw-arr{width:20px;height:20px}
+  .hw-n{font-family:Jost,sans-serif;font-size:12px;letter-spacing:.14em;color:var(--soft)}
+  .hw-steps h5{font-family:Jost,sans-serif;font-weight:400;font-size:18px;margin:6px 0 6px;line-height:1.2}
+  .hw-steps p{font-size:12.8px;line-height:1.55;color:var(--muted)}
+  .hw-steps .hw-chips{margin-top:10px}
+  .hw-loop{position:relative;color:var(--soft);margin:4px 0 0;height:40px}
+  .hw-loop svg{width:100%;height:40px;display:block}
+  .hw-loop span{position:absolute;left:50%;bottom:-2px;transform:translateX(-50%);background:var(--panel);padding:0 12px;font-size:12px;color:var(--muted);white-space:nowrap}
+  .hw-base{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+  .hw-base > div{border-top:1px solid var(--line);padding-top:12px}
+  .hw-base span{display:block;font-size:12.8px;color:var(--muted);line-height:1.5}
+  .hw-base b{margin-bottom:2px !important}
+  @media (max-width:1000px){
+    .hw-steps{grid-template-columns:1fr;gap:0}
+    .hw-a{height:30px}
+    .hw-a .hw-arr{transform:rotate(90deg)}
+    .hw-loop{display:none}
+    .hw-src-grid,.hw-base{grid-template-columns:1fr;gap:16px}
+  }
+  @media (max-width:720px){ .hw-board{padding:16px} .shots .cap{flex-direction:column;align-items:flex-start;gap:6px} }
+
   /* dashboard showcase inside a product card */
   .shots{grid-column:2 / -1;margin-top:8px}
   .shots .cap{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:14px}
@@ -583,6 +624,36 @@
         <div class="links"><a class="ul" href="https://lucasnode.app/" target="_blank" rel="noopener">Visit lucasnode.app</a><a class="ul" href="https://x402-list.com/services/lucas" target="_blank" rel="noopener">Listed on x402 List</a><a class="ul" href="https://api.cdp.coinbase.com/platform/v2/x402/discovery/search?query=lucas" target="_blank" rel="noopener">Listed in Coinbase x402 Bazaar</a></div>
       </div>
       <ul><li>Fact checks, research, data analysis and lead lists, every answer backed by a source</li><li>Active on toku.agency, Bounty and dealwork.ai, and listed in Coinbase's x402 Bazaar and x402 List</li><li>Builds and hosts client websites on its own</li><li>Safety limits I can add or remove at any time</li></ul>
+      <div class="shots hw" id="how-lucas-works">
+        <div class="cap"><span class="label">How Lucas works</span><p>From finding a job to getting paid, with no one pressing a button.</p></div>
+        <div class="hw-board">
+          <div class="hw-src">
+            <div class="hw-k">Where work comes from</div>
+            <div class="hw-src-grid">
+              <div><b>AI job marketplaces</b><div class="hw-chips"><span>toku.agency</span><span>Bounty</span><span>dealwork.ai</span><span>TaskMarket</span><span>NEAR</span></div></div>
+              <div><b>Other AI agents, paying per request</b><div class="hw-chips"><span>Coinbase x402 Bazaar</span><span>x402 List</span></div></div>
+            </div>
+          </div>
+          <div class="hw-down" aria-hidden="true"><i></i></div>
+          <ol class="hw-steps">
+            <li><span class="hw-n">01</span><h5>Scan</h5><p>Every 5 minutes, simple code checks about 177 open jobs and drops any with no budget or no money held for payment.</p></li>
+            <li class="hw-a" aria-hidden="true"><svg class="hw-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M14 7l5 5-5 5"/></svg></li>
+            <li><span class="hw-n">02</span><h5>Decide</h5><p>Claude reads each remaining brief, checks the fit and price, then bids or passes. AI is only paid for when a job is worth it.</p></li>
+            <li class="hw-a" aria-hidden="true"><svg class="hw-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M14 7l5 5-5 5"/></svg></li>
+            <li class="hw-work"><span class="hw-n">03</span><h5>Do the work</h5><p>Picks the right tools for the job:</p><div class="hw-chips"><span><svg><use href="#i-claude"/></svg>Claude</span><span>Exa search</span><span>Monid data</span><span>e2b sandbox</span><span>fal.ai</span><span><svg><use href="#i-elevenlabs"/></svg>ElevenLabs</span></div></li>
+            <li class="hw-a" aria-hidden="true"><svg class="hw-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M14 7l5 5-5 5"/></svg></li>
+            <li><span class="hw-n">04</span><h5>Check</h5><p>Reviews its own work: every claim needs a source, and anything unproven is marked "unverified" instead of guessed.</p></li>
+            <li class="hw-a" aria-hidden="true"><svg class="hw-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M14 7l5 5-5 5"/></svg></li>
+            <li><span class="hw-n">05</span><h5>Deliver &amp; get paid</h5><p>Sends the finished work, then collects payment from the marketplace or in USDC on Base through x402.</p></li>
+          </ol>
+          <div class="hw-loop" aria-hidden="true"><svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M990 4 V22 Q990 34 978 34 H22 Q10 34 10 22 V10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 6" vector-effect="non-scaling-stroke"/><path d="M4 16 L10 6 L16 16" fill="none" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/></svg><span>Every result is logged and feeds the next decision</span></div>
+          <div class="hw-base">
+            <div><b>Dashboard</b><span>Every scan, bid, delivery and sale is recorded</span></div>
+            <div><b>Safety limits</b><span>Rules Felipe can add or remove at any time</span></div>
+            <div><b>Human handoff</b><span>Pings Felipe only when a person must act</span></div>
+          </div>
+        </div>
+      </div>
       <div class="shots">
         <div class="cap"><span class="label">Dashboard design</span><p>Desktop and mobile. Click any screen to enlarge.</p></div>
         <a class="shot-desk" href="img/lucas-dashboard.jpg" data-zoom><div class="bar"><i></i><i></i><i></i><em>Lucas · Overview</em></div><img loading="lazy" src="img/lucas-dashboard.jpg" alt="Lucas dashboard overview: jobs and sales, daily activity chart, win rate and recent activity"></a>
