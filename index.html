@@ -194,6 +194,9 @@
   .shot-desk .bar i{width:8px;height:8px;border-radius:50%;background:#3A3A40}
   .shot-desk .bar em{font-style:normal;font-size:11px;color:#8A8A90;margin-left:10px}
   .shot-desk img{width:100%;display:block}
+  .shot-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  .shot-pair figure{margin:0}
+  .shot-pair figcaption{text-align:center;font-size:12.5px;color:var(--muted);margin-top:10px}
   .shot-phones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
   .phone-mini{display:block;cursor:zoom-in;border-radius:26px;padding:7px;background:#0A0A0A;border:1px solid var(--line);box-shadow:0 24px 50px -32px rgba(0,0,0,.55)}
   .phone-mini img{width:100%;aspect-ratio:9/16;object-fit:cover;object-position:top;border-radius:20px;display:block}
@@ -323,6 +326,7 @@
     .prod{grid-template-columns:1fr}
     .shots{grid-column:1 / -1}
     .shot-phones{gap:10px}
+    .shot-pair{grid-template-columns:1fr;gap:16px}
     .phone-mini{border-radius:16px;padding:4px}
     .phone-mini img{border-radius:12px}
     .ft-cols{gap:28px;flex-wrap:wrap}
@@ -538,6 +542,14 @@
         <div class="links"><a class="ul" href="https://orvinn.app/" target="_blank" rel="noopener">Visit orvinn.app</a><a class="ul" href="https://github.com/fgarzon78/orvinn-case-study" target="_blank" rel="noopener">Read the case study</a></div>
       </div>
       <ul><li>Connects to Square, Clover, Mindbody, Mailchimp, Constant Contact, Facebook, Instagram and Google</li><li>Team review inbox where AI makes edits and a person approves them</li><li>Plans, free trials and per-seat billing through Stripe</li><li>Weekly AI reports built from real engagement numbers</li></ul>
+      <div class="shots">
+        <div class="cap"><span class="label">Dashboard design</span><p>Click any screen to enlarge.</p></div>
+        <a class="shot-desk" href="img/orvinn-overview.jpg" data-zoom><div class="bar"><i></i><i></i><i></i><em>Orvinn · Overview</em></div><img loading="lazy" src="img/orvinn-overview.jpg" alt="Orvinn dashboard overview with monthly usage, plan cycle and 30-day posting and email activity charts"></a>
+        <div class="shot-pair">
+          <figure><a class="shot-desk" href="img/orvinn-results.jpg" data-zoom><div class="bar"><i></i><i></i><i></i><em>Results</em></div><img loading="lazy" src="img/orvinn-results.jpg" alt="Orvinn results: published posts by platform, audience engagement, email campaigns and automations"></a><figcaption>Results and engagement</figcaption></figure>
+          <figure><a class="shot-desk" href="img/orvinn-generate.jpg" data-zoom><div class="bar"><i></i><i></i><i></i><em>Generate</em></div><img loading="lazy" src="img/orvinn-generate.jpg" alt="Orvinn Generate screen: choose platforms, topic and language, with a live phone preview"></a><figcaption>AI post generator with live preview</figcaption></figure>
+        </div>
+      </div>
     </div>
 
     <div class="prod reveal">
