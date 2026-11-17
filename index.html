@@ -194,6 +194,15 @@
   .shot-desk .bar i{width:8px;height:8px;border-radius:50%;background:#3A3A40}
   .shot-desk .bar em{font-style:normal;font-size:11px;color:#8A8A90;margin-left:10px}
   .shot-desk img{width:100%;display:block}
+  .mob-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:34px}
+  .mode-switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg)}
+  .mode-switch button{display:inline-flex;align-items:center;gap:6px;border:0;background:none;color:var(--muted);font:500 12.5px Inter,sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+  .mode-switch button svg{width:15px;height:15px}
+  .mode-switch button.on{background:var(--fg);color:var(--bg)}
+  .orv-phones img{transition:opacity .25s}
+  .orv-phones.fading img{opacity:0}
+  .orv-phones .phone-mini{transition:background .3s}
+  .orv-phones.light .phone-mini{background:#E9E9EB}
   .shot-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
   .shot-pair figure{margin:0}
   .shot-pair figcaption{text-align:center;font-size:12.5px;color:var(--muted);margin-top:10px}
@@ -549,6 +558,17 @@
           <figure><a class="shot-desk" href="img/orvinn-results.jpg" data-zoom><div class="bar"><i></i><i></i><i></i><em>Results</em></div><img loading="lazy" src="img/orvinn-results.jpg" alt="Orvinn results: published posts by platform, audience engagement, email campaigns and automations"></a><figcaption>Results and engagement</figcaption></figure>
           <figure><a class="shot-desk" href="img/orvinn-generate.jpg" data-zoom><div class="bar"><i></i><i></i><i></i><em>Generate</em></div><img loading="lazy" src="img/orvinn-generate.jpg" alt="Orvinn Generate screen: choose platforms, topic and language, with a live phone preview"></a><figcaption>AI post generator with live preview</figcaption></figure>
         </div>
+        <div class="mob-head"><span class="label">Mobile app</span>
+          <div class="mode-switch" role="group" aria-label="Preview light or dark mode">
+            <button type="button" class="on" data-mode="light" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>Light</button>
+            <button type="button" data-mode="dark" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>Dark</button>
+          </div>
+        </div>
+        <div class="shot-phones orv-phones">
+          <figure><a class="phone-mini" href="img/orvinn-m-activity-light.jpg" data-zoom data-base="activity"><img loading="lazy" src="img/orvinn-m-activity-light.jpg" alt="Orvinn mobile activity charts and content status"></a><figcaption>Activity</figcaption></figure>
+          <figure><a class="phone-mini" href="img/orvinn-m-menu-light.jpg" data-zoom data-base="menu"><img loading="lazy" src="img/orvinn-m-menu-light.jpg" alt="Orvinn mobile navigation menu over email and automation stats"></a><figcaption>Navigation</figcaption></figure>
+          <figure><a class="phone-mini" href="img/orvinn-m-account-light.jpg" data-zoom data-base="account"><img loading="lazy" src="img/orvinn-m-account-light.jpg" alt="Orvinn mobile account menu with light and dark mode option"></a><figcaption>Account menu</figcaption></figure>
+        </div>
       </div>
     </div>
 
@@ -784,6 +804,28 @@
       b.querySelector('.x').style.display = v.muted ? '' : 'none';
       b.setAttribute('aria-label', v.muted ? 'Turn sound on' : 'Turn sound off');
     });
+  })();
+
+  // Orvinn mobile preview: light / dark switch
+  (function(){
+    const wrap = document.querySelector('.orv-phones'); if (!wrap) return;
+    const btns = document.querySelectorAll('.mode-switch button');
+    // preload both versions so the switch is instant
+    wrap.querySelectorAll('[data-base]').forEach(a => ['light','dark'].forEach(m => { const i = new Image(); i.src = 'img/orvinn-m-' + a.dataset.base + '-' + m + '.jpg'; }));
+    wrap.classList.add('light');
+    btns.forEach(b => b.addEventListener('click', () => {
+      const mode = b.dataset.mode;
+      btns.forEach(x => { const on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+      wrap.classList.add('fading');
+      setTimeout(() => {
+        wrap.querySelectorAll('[data-base]').forEach(a => {
+          const src = 'img/orvinn-m-' + a.dataset.base + '-' + mode + '.jpg';
+          a.href = src; a.querySelector('img').src = src;
+        });
+        wrap.classList.toggle('light', mode === 'light');
+        wrap.classList.remove('fading');
+      }, 220);
+    }));
   })();
 
   // enlarge dashboard screenshots
