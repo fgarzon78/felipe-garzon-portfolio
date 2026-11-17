@@ -13,7 +13,7 @@ This file is a plain-text summary of felipe-garzon-portfolio for AI agents and l
 
 ## Services
 
-- WordPress websites: custom design on WordPress and Kadence, forms, member logins, document libraries, speed and search engine basics, client training
+- WordPress websites: custom design on WordPress with the Divi and Kadence page builders, forms, member logins, document libraries, speed and search engine basics, client training
 - Shopify stores: store setup, theme and product pages, payments and shipping, email and Instagram sales connected
 - Automation and AI: Make.com and Zapier automations, AI content with Claude and ChatGPT, auto-posting to social media, custom AI agents
 
@@ -42,7 +42,7 @@ This file is a plain-text summary of felipe-garzon-portfolio for AI agents and l
 
 ## Tools
 
-WordPress, Kadence, Shopify, HTML, CSS, JavaScript, Node.js, Next.js, Supabase, Stripe, Vercel, Netlify, GitHub, Make.com, Zapier, Mailchimp, Constant Contact, Placid, Buffer, Claude, ChatGPT, ElevenLabs
+WordPress, Divi, Kadence, Shopify, HTML, CSS, JavaScript, Node.js, Next.js, Supabase, Stripe, Vercel, Netlify, GitHub, Make.com, Zapier, Mailchimp, Constant Contact, Placid, Buffer, Claude, ChatGPT, ElevenLabs
 
 ## How Felipe works
 
